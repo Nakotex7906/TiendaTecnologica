@@ -1,11 +1,11 @@
 package Modelo;
 
-public class Pantallla {
+public class Pantalla {
     private String marca;
     private String modelo;
     private int anioP;
 
-    public Pantallla(String marca, String modelo, int anioP) {
+    public Pantalla(String marca, String modelo, int anioP) {
         this.marca = marca;
         this.modelo = modelo;
         this.anioP = anioP;

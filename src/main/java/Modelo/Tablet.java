@@ -1,8 +1,15 @@
 package Modelo;
 
+import java.util.List;
+
 public class Tablet extends DispositivoTecnologico{
 
-    public Tablet(String marca, String memoriaRAM, String memoriaAlmacenamiento, String procesador, String modelo, int anioP, double precio, int stock) {
+    private String resolucionPantalla;
+    private List<String> accesorios;
+
+    public Tablet(String marca, String memoriaRAM, String memoriaAlmacenamiento, String procesador, String modelo, int anioP, double precio, int stock, String resolucionPantalla, List<String> accesorios) {
         super(marca, memoriaRAM, memoriaAlmacenamiento, procesador, modelo, anioP, precio, stock);
+        this.resolucionPantalla = resolucionPantalla;
+        this.accesorios = accesorios;
     }
 }

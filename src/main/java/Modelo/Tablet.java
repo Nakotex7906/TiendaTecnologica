@@ -1,15 +1,27 @@
 package Modelo;
 
-import java.util.List;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Tablet extends DispositivoTecnologico{
 
     private String resolucionPantalla;
-    private List<String> accesorios;
+    private String[] accesorios;
 
-    public Tablet(String marca, String memoriaRAM, String memoriaAlmacenamiento, String procesador, String modelo,String tipo, int anioP, double precio, int stock, String resolucionPantalla, List<String> accesorios) {
-        super(marca, memoriaRAM, memoriaAlmacenamiento, procesador, modelo,tipo, anioP, precio, stock);
+    public Tablet(String marca, String memoriaRAM, String memoriaAlmacenamiento, String procesador, String modelo,
+                  int anioP, double precio, int stock, String resolucionPantalla, String[] accesorios) {
+        super(marca, memoriaRAM, memoriaAlmacenamiento, procesador, modelo, anioP, precio, stock);
         this.resolucionPantalla = resolucionPantalla;
         this.accesorios = accesorios;
     }
+
+    public String getResolucionPantalla() {
+        return resolucionPantalla;
+    }
+
+    public String[] getAccesorios() {
+        return accesorios;
+    }
+
+
 }

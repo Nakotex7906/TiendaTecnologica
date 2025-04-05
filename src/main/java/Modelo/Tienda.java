@@ -1,5 +1,7 @@
 package Modelo;
 
+import Data.GestorArchivo;
+
 import java.io.*;
 import java.util.List;
 
@@ -13,36 +15,15 @@ public class Tienda {
         this.catalogo = catalogo;
     }
 
-    private void actualizarDireccionEnArchivo() {
-        try (BufferedReader br = new BufferedReader(new FileReader("tienda.txt"));
-             FileWriter fw = new FileWriter("tienda_temp.txt");
-             PrintWriter pw = new PrintWriter(fw)) {
+    public Tienda() {}
 
-            String line;
-            boolean direccionModificada = false;
+    public String getDireccion() {
+        return direccion;
+    }
 
-            while ((line = br.readLine()) != null) {
-
-                if (!direccionModificada) {
-                    pw.println(this.direccion);
-                    direccionModificada = true;
-                } else {
-                    pw.println(line);
-                }
-            }
-
-            File originalFile = new File("tienda.txt");
-            File tempFile = new File("tienda_temp.txt");
-
-            if (originalFile.delete()) {
-                tempFile.renameTo(originalFile);  // Reemplazar el archivo original con el archivo modificado
-            }
-
-            System.out.println("Dirección de la tienda actualizada correctamente");
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    public void setDireccion(String Nuevadireccion) {
+        this.direccion = Nuevadireccion;
+        GestorArchivo.guardarDireccion(Nuevadireccion); // Guarda la direccion en el archivo
     }
 
 }

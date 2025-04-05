@@ -22,4 +22,13 @@ public class Pantalla {
     public int getAnioP() {
         return anioP;
     }
+
+    @Override
+    public String toString() {
+        return "Pantalla{" +
+                "marca='" + marca + '\'' +
+                ", modelo='" + modelo + '\'' +
+                ", anioP=" + anioP +
+                '}';
+    }
 }

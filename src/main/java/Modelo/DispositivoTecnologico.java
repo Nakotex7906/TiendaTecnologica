@@ -25,6 +25,12 @@ public class DispositivoTecnologico {
 
     public String getTipo() { return this.getClass().getSimpleName(); }
 
+    public void reducirStock() {
+        if (stock > 0) {
+            stock--;
+        }
+    }
+
     public String getMarca() {
         return marca;
     }

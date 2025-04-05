@@ -1,6 +1,6 @@
 package Modelo;
 
-public class DispositivoTecnologico {
+public abstract class DispositivoTecnologico {
 
     private String marca;
     private String memoriaRAM;
@@ -31,36 +31,26 @@ public class DispositivoTecnologico {
         }
     }
 
+
     public String getMarca() {
         return marca;
     }
 
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
+
 
     public String getMemoriaRAM() {
         return memoriaRAM;
     }
 
-    public void setMemoriaRAM(String memoriaRAM) {
-        this.memoriaRAM = memoriaRAM;
-    }
+
 
     public String getMemoriaAlmacenamiento() {
         return memoriaAlmacenamiento;
     }
 
-    public void setMemoriaAlmacenamiento(String memoriaAlmacenamiento) {
-        this.memoriaAlmacenamiento = memoriaAlmacenamiento;
-    }
 
     public String getProcesador() {
         return procesador;
-    }
-
-    public void setProcesador(String procesador) {
-        this.procesador = procesador;
     }
 
     public String getModelo() {
@@ -76,25 +66,13 @@ public class DispositivoTecnologico {
         return anioP;
     }
 
-    public void setAnioP(int anioP) {
-        this.anioP = anioP;
-    }
-
     public double getPrecio() {
         return precio;
-    }
-
-    public void setPrecio(double precio) {
-        this.precio = precio;
     }
 
 
     public int getStock() {
         return stock;
-    }
-
-    public void setStock(int stock) {
-        this.stock = stock;
     }
 
 }

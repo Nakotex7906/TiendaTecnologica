@@ -2,10 +2,12 @@
 import Data.GestorArchivo;
 import Modelo.*;
 
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         Tienda tienda = new Tienda();
-        tienda.setDireccion("Av alemania 3450");
+        //tienda.setDireccion("Av alemania 3450");
         String[] accesorios = {"Lapiz,funda"};
         Pantalla pantalla = new Pantalla("Lg","lg27",2020);
 
@@ -28,6 +30,13 @@ public class Main {
         //GestorArchivo.guardarTablet(tablet);
         //GestorArchivo.guardarNotebook(notebook);
 
+        //tienda.agregarDispositivo(pc);
+        //List<DispositivoTecnologico> resultados = tienda.buscarPorMarca("Lenovo");
+        //List<DispositivoTecnologico> resultados2 = tienda.buscarPorTipo("CompuEscritorio");
+
+        //for (DispositivoTecnologico d : resultados2) {
+            //System.out.println(d.getModelo() + " - $" + d.getPrecio());
+        //}
 
     }
 

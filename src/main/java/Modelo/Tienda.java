@@ -3,14 +3,17 @@ package Modelo;
 import Data.GestorArchivo;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Tienda {
 
     private String direccion;
-    private List<DispositivoTecnologico> catalogo;
+    private ArrayList<DispositivoTecnologico> catalogo = new ArrayList<>();
+    private ArrayList<Cliente> clientes = new ArrayList<>();
 
-    public Tienda(String direccion, List<DispositivoTecnologico> catalogo) {
+    public Tienda(String direccion, ArrayList<DispositivoTecnologico> catalogo) {
         this.direccion = direccion;
         this.catalogo = catalogo;
     }
@@ -24,6 +27,26 @@ public class Tienda {
     public void setDireccion(String Nuevadireccion) {
         this.direccion = Nuevadireccion;
         GestorArchivo.guardarDireccion(Nuevadireccion); // Guarda la direccion en el archivo
+    }
+
+    public void agregarDispositivo(DispositivoTecnologico d) {
+        this.catalogo.add(d);
+    }
+
+    public void agregarCliente(Cliente c) {
+        this.clientes.add(c);
+    }
+
+    public List<DispositivoTecnologico> buscarPorMarca(String marca) {
+        return catalogo.stream().filter(d -> d.getMarca().equalsIgnoreCase(marca)).toList();
+    }
+
+    public List<DispositivoTecnologico> buscarPorModelo(String modelo) {
+        return catalogo.stream().filter(t -> t.getModelo().equalsIgnoreCase(modelo)).toList();
+    }
+
+    public List<DispositivoTecnologico> buscarPorTipo(String tipo) {
+        return catalogo.stream().filter(m -> m.getTipo().equalsIgnoreCase(tipo)).toList();
     }
 
 }

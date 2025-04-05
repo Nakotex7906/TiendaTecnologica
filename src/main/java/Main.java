@@ -2,6 +2,7 @@
 import Data.GestorArchivo;
 import Modelo.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
@@ -37,6 +38,18 @@ public class Main {
         //for (DispositivoTecnologico d : resultados2) {
             //System.out.println(d.getModelo() + " - $" + d.getPrecio());
         //}
+
+        tienda.agregarDispositivo(notebook);
+        tienda.agregarDispositivo(tablet);
+        GestorArchivo.guardarNotebook(notebook);
+        GestorArchivo.guardarTablet(tablet);
+
+        List<DispositivoTecnologico> carrito = new ArrayList<>();
+        carrito.add(notebook);
+        carrito.add(tablet);
+
+        tienda.realizarVenta(cliente, carrito);
+
 
     }
 

@@ -62,6 +62,7 @@ public class Tienda {
         Venta venta = new Venta(cliente,dispositivos);
         ventas.add(venta);
         System.out.println("Venta realizada a " + cliente.getNombre());
+        GestorArchivo.guardarVenta(venta);
     }
 
 }

@@ -53,7 +53,7 @@ public class GestorArchivo {
 
     // Cambia la direccion de la tienda
     public static void guardarDireccion(String direccion) {
-        try (FileWriter fileWriter = new FileWriter("tienda.csv")) {
+        try (FileWriter fileWriter = new FileWriter("csvs/tienda.csv")) {
             fileWriter.write(direccion);
         }catch (IOException e) {
             e.printStackTrace();

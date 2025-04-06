@@ -15,12 +15,12 @@ public class Main {
 
         boolean salir = false;
         while (!salir) {
-            System.out.println("\n MENÚ PRINCIPAL:");
+            System.out.println("\n MENU PRINCIPAL:");
             System.out.println("1. Registrar cliente");
             System.out.println("2. Ver productos disponibles");
             System.out.println("3. Realizar compra");
             System.out.println("4. Salir");
-            System.out.print("Selecciona una opción: ");
+            System.out.print("Selecciona una opcion: ");
             int opcion = scanner.nextInt();
             scanner.nextLine();
 
@@ -29,7 +29,7 @@ public class Main {
                 case 2 -> mostrarProductos();
                 case 3 -> realizarCompra();
                 case 4 -> salir = true;
-                default -> System.out.println("Opción no válida.");
+                default -> System.out.println("Opcion no valida.");
             }
         }
     }
@@ -51,7 +51,7 @@ public class Main {
         String apellido = scanner.nextLine();
         System.out.print("Correo: ");
         String correo = scanner.nextLine();
-        System.out.print("Teléfono: ");
+        System.out.print("Telefono: ");
         String telefono = scanner.nextLine();
         System.out.print("Estado Civil: ");
         String estadoCivil = scanner.nextLine();

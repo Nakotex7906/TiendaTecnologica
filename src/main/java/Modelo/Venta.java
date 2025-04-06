@@ -27,4 +27,9 @@ public class Venta {
         return fecha;
     }
 
+    @Override
+    public String toString() {
+        return "Venta a " +  cliente.getNombre() + " a fecha " + fecha + " de " + dispositivosComprados;
+    }
+
 }

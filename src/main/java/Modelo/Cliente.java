@@ -5,11 +5,11 @@ public class Cliente {
     private String nombre;
     private String apellido;
     private String correo;
-    private int telefono;
+    private String telefono;
     private String estadoCivil;
     private String ciudad;
 
-    public Cliente(String nombre, String apellido, String correo, int telefono, String estadoCivil, String ciudad) {
+    public Cliente(String nombre, String apellido, String correo, String telefono, String estadoCivil, String ciudad) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.correo = correo;
@@ -42,11 +42,11 @@ public class Cliente {
         this.correo = correo;
     }
 
-    public int getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(int telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
 
@@ -64,5 +64,10 @@ public class Cliente {
 
     public void setCiudad(String ciudad) {
         this.ciudad = ciudad;
+    }
+
+    @Override
+    public String toString() {
+        return "Cliente{" + "nombre=" + nombre + ", apellido=" + apellido + ", correo=";
     }
 }

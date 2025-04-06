@@ -31,23 +31,17 @@ public abstract class DispositivoTecnologico {
         }
     }
 
-
     public String getMarca() {
         return marca;
     }
-
-
 
     public String getMemoriaRAM() {
         return memoriaRAM;
     }
 
-
-
     public String getMemoriaAlmacenamiento() {
         return memoriaAlmacenamiento;
     }
-
 
     public String getProcesador() {
         return procesador;

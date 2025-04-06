@@ -36,6 +36,7 @@ public class Tienda {
 
     public void agregarCliente(Cliente c) {
         this.clientes.add(c);
+        GestorArchivo.guardarCliente(c);
     }
 
     public List<DispositivoTecnologico> buscarPorMarca(String marca) {

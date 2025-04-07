@@ -1,8 +1,5 @@
 package Modelo;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
 public class Tablet extends DispositivoTecnologico{
 
     private String resolucionPantalla;

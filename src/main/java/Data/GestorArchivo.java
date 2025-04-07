@@ -1,9 +1,7 @@
 package Data;
 
 import Modelo.*;
-
 import java.io.*;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -13,37 +11,7 @@ public class GestorArchivo {
     private List<Cliente> clientes;
     private final String archivoClientes = "csvs/clientes.csv";
 
-    public GestorArchivo() {
-        this.clientes = new ArrayList<>();
-        cargarClientes();
-    }
-
 // ------------------------------Clientes----------------------------------
-
-    public void registrarCliente(Cliente cliente) {
-        if (!emailExiste(cliente.getCorreo())) {
-            clientes.add(cliente);
-            guardarCliente(cliente);
-            System.out.println("Cliente registrado exitosamente.");
-        } else {
-            System.out.println("El email ya esta registrado.");
-        }
-    }
-
-    public Cliente login(String correo) {
-        for (Cliente c : clientes) {
-            if (c.getCorreo().equalsIgnoreCase(correo)) {
-                System.out.println("Login exitoso. Bienvenido/a " + c.getNombre());
-                return c;
-            }
-        }
-        System.out.println("Email no encontrado. Por favor registrese.");
-        return null;
-    }
-
-    private boolean emailExiste(String email) {
-        return clientes.stream().anyMatch(c -> c.getCorreo().equalsIgnoreCase(email));
-    }
 
     public static void guardarCliente(Cliente cliente) {
         try (FileWriter fw = new FileWriter("csvs/clientes.csv", true)) {
@@ -53,27 +21,7 @@ public class GestorArchivo {
             System.out.println("Error al guardar cliente: " + e.getMessage());
         }
     }
-private void cargarClientes() {
-    File archivo = new File(archivoClientes);
-    if (!archivo.exists()) return;
 
-    try (BufferedReader br = new BufferedReader(new FileReader(archivo))) {
-        String linea;
-        while ((linea = br.readLine()) != null) {
-            String[] datos = linea.split(",");
-            if (datos.length == 6) {
-                Cliente c = new Cliente(datos[0], datos[1], datos[2], datos[3], datos[4], datos[5]);
-                clientes.add(c);
-            }
-        }
-    } catch (IOException e) {
-        System.out.println("Error al cargar clientes: " + e.getMessage());
-    }
-}
-
-    public List<Cliente> obtenerClientes() {
-        return clientes;
-    }
 //----------------------Dispostivos------------------------------
 
     public static void guardarComputador(CompuEscritorio pc){

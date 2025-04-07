@@ -11,16 +11,8 @@ public class Pantalla {
         this.anioP = anioP;
     }
 
-    public String getMarca() {
-        return marca;
-    }
-
     public String getModelo() {
         return modelo;
-    }
-
-    public int getAnioP() {
-        return anioP;
     }
 
     @Override

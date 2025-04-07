@@ -43,18 +43,11 @@ public abstract class DispositivoTecnologico {
         return memoriaAlmacenamiento;
     }
 
-    public String getProcesador() {
-        return procesador;
-    }
+    public String getProcesador() {return procesador;}
 
-    public String getModelo() {
-        return modelo;
-    }
+    public String getModelo() {return modelo;}
 
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
-    }
-
+    public void setModelo(String modelo) {this.modelo = modelo;}
 
     public int getAnioP() {
         return anioP;
@@ -64,10 +57,7 @@ public abstract class DispositivoTecnologico {
         return precio;
     }
 
-
-    public int getStock() {
-        return stock;
-    }
+    public int getStock() {return stock;}
 
 }
 
